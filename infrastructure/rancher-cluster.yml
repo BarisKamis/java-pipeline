@@ -1,6 +1,6 @@
 nodes:
-  - address: 172.31.89.14 # Creds for Rancher cluster is created for this IP address
-    internal_address: 172.31.89.14
+  - address: 54.173.109.155 # Creds for Rancher cluster is created for this IP address
+    internal_address: 172.31.83.111
     user: ubuntu
     role: [controlplane, worker, etcd]
 
