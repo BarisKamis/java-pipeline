@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     kompose.cmd: kompose convert -f k8s/docker-compose.yml -o k8s/base
     kompose.image-pull-secret: regcred
     kompose.service.expose: petclinic07.bariskamis.com
@@ -12,6 +13,10 @@ metadata:
     io.kompose.service: api-gateway
   name: api-gateway
 spec:
+  tls:
+    - hosts:
+      - petclinic07.bariskamis.com
+      secretName: petclinic-tls
   rules:
     - host: petclinic07.clarusway.us
       http:
