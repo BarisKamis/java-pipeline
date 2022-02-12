@@ -18,7 +18,7 @@ spec:
       - petclinic07.bariskamis.com
       secretName: petclinic-tls
   rules:
-    - host: petclinic07.clarusway.us
+    - host: petclinic07.bariskamis.com
       http:
         paths:
           - backend:
